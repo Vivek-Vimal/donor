@@ -66,7 +66,7 @@ export const Link1 = styled(RouterLink)`
 }
 
 @media only screen and (max-width: 1600px) {
-  margin: 0 0 0 2rem;
+  margin: 0 0 0 1rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -83,6 +83,7 @@ const Link2 = styled(RouterLink)`
   text-decoration: none;
   color: #FFF !important;
   cursor: pointer;
+
   @media only screen and (max-width: 768px) {
     
   }
@@ -103,7 +104,7 @@ cursor: pointer;
 
 const Mobile = styled.div`
   display: none;
-  @media only screen and (max-width: 1500px) {
+  @media only screen and (max-width: 1200px) {
     display: block;
   }`
 
@@ -129,6 +130,9 @@ export const IconContainer = styled.div`
   
   margin-right: 8vw;
   @media only screen and (max-width: 1600px) {
+    margin: 0 1rem 0 0;
+  }
+  @media only screen and (max-width: 1200px) {
     margin: 0 6rem 0 0;
   }
   @media only screen and (max-width: 768px) {

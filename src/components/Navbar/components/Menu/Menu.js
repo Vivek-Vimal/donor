@@ -10,7 +10,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 const MenuItems = styled.div`
   display: grid;
   place-items: center;
-  margin-top: 30%;
+  margin-top: 5rem;
 `
 
 const Link1 = styled(Link)`
@@ -56,7 +56,7 @@ const H = styled(Link)`
       font-size: 1.5rem;
       font-weight: bold;
     font-family: 'Montserrat', sans-serif;
-  
+      color: #000;
 `;
 
 const Menu = ({ open, ...props }) => {
