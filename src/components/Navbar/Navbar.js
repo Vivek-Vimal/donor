@@ -12,19 +12,19 @@ import { useSelector, useDispatch } from "react-redux";
 import dis from './Discord.png';
 import med from './Medium.png'
 import twi from './Twitter.png';
-
-
+import { Link as RouterLink } from 'react-router-dom'
 
 export const backgroundColor = theme("theme", {
   light: "#000000",
   dark: "#E5E5E5",
 });  
 
-export const Link1 = styled(Link)`
+export const Link1 = styled(RouterLink)`
   display: flex;
   margin: 0 0 0 8vw;
   align-items: center;
   text-decoration: none;
+  color: #000;
   cursor: pointer;
   font-size: 2.4rem;
   font-family: 'Roboto Condensed', sans-serif;
@@ -76,7 +76,7 @@ export const Link1 = styled(Link)`
 
 `;
 
-const Link2 = styled(Link)`
+const Link2 = styled(RouterLink)`
   display: flex;
   margin: 0;
   align-items: center;
@@ -89,9 +89,21 @@ const Link2 = styled(Link)`
 
 `;
 
+const Hr = styled.a`
+display: flex;
+margin: 0;
+align-items: center;
+text-decoration: none;
+color: #FFF !important;
+cursor: pointer;
+@media only screen and (max-width: 768px) {
+  
+}
+`
+
 const Mobile = styled.div`
   display: none;
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1500px) {
     display: block;
   }`
 
@@ -158,18 +170,19 @@ const changeBackground = () => {
         <nav className={navbar ?  "navActiveLight": "nav"} >
 
          
-            <Link1 to="home" spy={true} smooth={true} ><img src={logo} alt="Logo" className={navbar ? "LogoActive" : "Logo"} /> Donor</Link1>
+            <Link1 to="/" spy={true} smooth={true} ><img src={logo} alt="Logo" className={navbar ? "LogoActive" : "Logo"} /> Donor</Link1>
           
           {/* <Mobile>
             <Link1 to="home" spy={true} smooth={true} style={{marginRight:"0"}} ><img src={mlogo} alt="mlogo" className="LogoB"/></Link1>
           </Mobile> */}
           <PC>
             <ul className="list">
-                <Link2 to="" spy={true} smooth={true} offset={-80}>Earn</Link2>
-                <Link2 to="" spy={true} smooth={true} offset={-80}>Donate</Link2>
-                <Link2 to="" spy={true} smooth={true} offset={-80}>Fundraise for</Link2> 
-                <Link2 to="" spy={true} smooth={true} offset={-80}>Docs</Link2>
-                <Link2 to="" spy={true} smooth={true} offset={-80}>How It Works</Link2> 
+                <Hr href="http://donor-vaults.s3-website-us-west-2.amazonaws.com/#/avax" spy={true} smooth={true} offset={-80}>Vault</Hr>
+                <Link2 to="/earn" spy={true} smooth={true} offset={-80}>Earn</Link2>
+                <Link2 to="/donate" spy={true} smooth={true} offset={-80}>Donate</Link2>
+                <Link2 to="/fund" spy={true} smooth={true} offset={-80}>Fundraise for</Link2> 
+                <Link2 to="/docs" spy={true} smooth={true} offset={-80}>Docs</Link2>
+                <Link2 to="/work" spy={true} smooth={true} offset={-80}>How It Works</Link2> 
             </ul> 
           </PC>
 

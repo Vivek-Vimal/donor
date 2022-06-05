@@ -99,6 +99,12 @@ const Upper = styled.div`
     }
 `
 
+const Line = styled.div`
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,0.6);
+    margin: 2rem 0;
+`
 
 
 const Lower = styled.div`
@@ -128,12 +134,12 @@ const Footer = () => {
     return (
         <Sec>
         <StyledFooter >
-
+    
             <Upper>
-
+    
                 <Left>
                     <IconContainer>
-                        <Link1 style={{margin:"0"}} to="home" spy={true} smooth={true} ><img src={logo} alt="Logo" style={{width:"4rem",height:"4rem"}} /></Link1>
+                        <Link1 style={{margin:"0"}} to="home" spy={true} smooth={true} ><img src='/yellow.png' alt="Logo" style={{width:"4rem",height:"4rem"}} /></Link1>
                         <T style={{fontSize:'1rem',lineHeight:'1.6'}}>
                             We ara a lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -142,7 +148,7 @@ const Footer = () => {
                     </IconContainer> 
                    
                 </Left>
-
+    
                 <Mid>
                     <div style={{margin:'2rem 0 0 0'}}>
                         <H style={{fontSize:'1.6rem',fontWeight:'500',margin:'0 0 1rem 0'}}>About</H>
@@ -172,8 +178,8 @@ const Footer = () => {
                         <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400'}}>Contact us</T>
                     </div>
                 </Mid>
-
-                <Right>
+    
+                {/* <Right>
                     <H style={{fontSize:'1.6rem',fontWeight:'500'}}>Contact</H>
                     <div style={{display:'flex'}}>
                         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -186,7 +192,7 @@ const Footer = () => {
                             <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'0.8rem',fontWeight:'400'}}>Toi</T>
                             <T style={{margin:'0',fontSize:'1rem',fontWeight:'400'}}>310-437-2766</T>
                         </div>
-
+    
                     </div>
                     <div style={{display:'flex'}}>
                         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -199,7 +205,7 @@ const Footer = () => {
                             <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'0.8rem',fontWeight:'400'}}>Toi</T>
                             <T style={{margin:'0',fontSize:'1rem',fontWeight:'400'}}>310-437-2766</T>
                         </div>
-
+    
                     </div>
                     <div style={{display:'flex'}}>
                         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -212,13 +218,23 @@ const Footer = () => {
                             <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'0.8rem',fontWeight:'400'}}>Toi</T>
                             <T style={{margin:'0',fontSize:'1rem',fontWeight:'400'}}>310-437-2766</T>
                         </div>
-
+    
                     </div>
-                </Right>
-
+                </Right> */}
+    
             </Upper>
             
-
+            <Line />
+    
+            <div style={{padding:'0 1rem '}}>
+              <H>
+              Disclaimer:</H>
+              <T>
+                The Information provided on this website does not constitute investment advice, financial advice, trading advice, or any other sort of advice, and you should not treat any of the website's content as such. The DONOR team provides the website as a service to the public, and is not resonsible for, and expressly disclaims all liabilty for, damages of any kind arising out of use, reference to, or reliance on any information contained within this website. While the information contained within this website is periodically updated, no quarantee is given that the information provided in this webiste is correct, complete and up-to-date.
+              </T>
+    
+            </div>
+    
             <Lower>
                 <div style={{color:'#fff'}}>
                 © 2000-2021,<span style={{color:'rgba(2, 169, 92, 1)'}}> Donor</span>  All Rights Reserved
@@ -228,7 +244,7 @@ const Footer = () => {
                     <path d="M24.4167 16.275V21.35H28.8583C29.2 21.35 29.3708 21.7 29.3708 22.05L28.6875 25.375C28.6875 25.55 28.3458 25.725 28.175 25.725H24.4167V38.5H19.2917V25.9H16.3875C16.0458 25.9 15.875 25.725 15.875 25.375V22.05C15.875 21.7 16.0458 21.525 16.3875 21.525H19.2917V15.75C19.2917 12.775 21.5125 10.5 24.4167 10.5H29.0292C29.3708 10.5 29.5417 10.675 29.5417 11.025V15.225C29.5417 15.575 29.3708 15.75 29.0292 15.75H24.9292C24.5875 15.75 24.4167 15.925 24.4167 16.275Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round"/>
                     <path d="M26.1253 38.5H15.8753C7.33366 38.5 3.91699 35 3.91699 26.25V15.75C3.91699 7 7.33366 3.5 15.8753 3.5H26.1253C34.667 3.5 38.0837 7 38.0837 15.75V26.25C38.0837 35 34.667 38.5 26.1253 38.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-
+    
                     <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M24.4167 16.275V21.35H28.8583C29.2 21.35 29.3708 21.7 29.3708 22.05L28.6875 25.375C28.6875 25.55 28.3458 25.725 28.175 25.725H24.4167V38.5H19.2917V25.9H16.3875C16.0458 25.9 15.875 25.725 15.875 25.375V22.05C15.875 21.7 16.0458 21.525 16.3875 21.525H19.2917V15.75C19.2917 12.775 21.5125 10.5 24.4167 10.5H29.0292C29.3708 10.5 29.5417 10.675 29.5417 11.025V15.225C29.5417 15.575 29.3708 15.75 29.0292 15.75H24.9292C24.5875 15.75 24.4167 15.925 24.4167 16.275Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round"/>
                     <path d="M26.1253 38.5H15.8753C7.33366 38.5 3.91699 35 3.91699 26.25V15.75C3.91699 7 7.33366 3.5 15.8753 3.5H26.1253C34.667 3.5 38.0837 7 38.0837 15.75V26.25C38.0837 35 34.667 38.5 26.1253 38.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
@@ -238,12 +254,12 @@ const Footer = () => {
                     <path d="M24.4167 16.275V21.35H28.8583C29.2 21.35 29.3708 21.7 29.3708 22.05L28.6875 25.375C28.6875 25.55 28.3458 25.725 28.175 25.725H24.4167V38.5H19.2917V25.9H16.3875C16.0458 25.9 15.875 25.725 15.875 25.375V22.05C15.875 21.7 16.0458 21.525 16.3875 21.525H19.2917V15.75C19.2917 12.775 21.5125 10.5 24.4167 10.5H29.0292C29.3708 10.5 29.5417 10.675 29.5417 11.025V15.225C29.5417 15.575 29.3708 15.75 29.0292 15.75H24.9292C24.5875 15.75 24.4167 15.925 24.4167 16.275Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round"/>
                     <path d="M26.1253 38.5H15.8753C7.33366 38.5 3.91699 35 3.91699 26.25V15.75C3.91699 7 7.33366 3.5 15.8753 3.5H26.1253C34.667 3.5 38.0837 7 38.0837 15.75V26.25C38.0837 35 34.667 38.5 26.1253 38.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-
+    
                     <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M24.4167 16.275V21.35H28.8583C29.2 21.35 29.3708 21.7 29.3708 22.05L28.6875 25.375C28.6875 25.55 28.3458 25.725 28.175 25.725H24.4167V38.5H19.2917V25.9H16.3875C16.0458 25.9 15.875 25.725 15.875 25.375V22.05C15.875 21.7 16.0458 21.525 16.3875 21.525H19.2917V15.75C19.2917 12.775 21.5125 10.5 24.4167 10.5H29.0292C29.3708 10.5 29.5417 10.675 29.5417 11.025V15.225C29.5417 15.575 29.3708 15.75 29.0292 15.75H24.9292C24.5875 15.75 24.4167 15.925 24.4167 16.275Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round"/>
                     <path d="M26.1253 38.5H15.8753C7.33366 38.5 3.91699 35 3.91699 26.25V15.75C3.91699 7 7.33366 3.5 15.8753 3.5H26.1253C34.667 3.5 38.0837 7 38.0837 15.75V26.25C38.0837 35 34.667 38.5 26.1253 38.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-
+    
                 </SocialMedia>
             </Lower>
            

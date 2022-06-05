@@ -67,23 +67,26 @@ const Menu = ({ open, ...props }) => {
 
   return (
     <StyledMenu open={open}  aria-hidden={!isHidden} {...props}  >
-      <Link1 to="home" spy={true} smooth={true}><img src={logo} alt="Logo" style={{width:"100%",height:"100%"}}/></Link1>
+      <Link1 to="home" spy={true} smooth={true}><img src='/yellow.png' alt="Logo" style={{width:"5rem",height:"5rem"}}/></Link1>
 
       <MenuItems >
-        <a href="/" style={{padding:"0"}} >
-           <H to="home" spy={true}  smooth={true}  >Home</H> 
+        <a href="http://donor-vaults.s3-website-us-west-2.amazonaws.com/#/avax" style={{padding:"0"}} >
+           <H to="home" spy={true}  smooth={true}  >Vault</H> 
         </a>
         <a style={{padding:"0"}}  >
-          <H to="learn" spy={true} smooth={true} >Learn</H>
+          <H to="learn" spy={true} smooth={true} >Earn</H>
         </a>
         <a style={{padding:"0"}}  >
-          <H to="rarity" spy={true} smooth={true} > Rarity</H>
+          <H to="rarity" spy={true} smooth={true} >Donate</H>
         </a>
         <a style={{padding:"0"}}  >
-         <H to="faq" spy={true} smooth={true} >FAQ</H> 
+         <H to="faq" spy={true} smooth={true} >Fundraise for</H> 
         </a>
         <a style={{padding:"0"}}  >
-         <H to="roadmap" spy={true} smooth={true} >Roadmap</H> 
+         <H to="roadmap" spy={true} smooth={true} >Docs</H> 
+        </a>
+        <a style={{padding:"0"}}  >
+         <H to="roadmap" spy={true} smooth={true} >How it Works</H> 
         </a>
       </MenuItems>
 

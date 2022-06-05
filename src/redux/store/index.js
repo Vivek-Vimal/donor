@@ -17,7 +17,7 @@ const localStorageKey = "theme";
 const persistedTheme = localStorage.getItem(localStorageKey);
 
 let initialState = {
-  preferences: persistedTheme ? JSON.parse(persistedTheme) : {},
+ // preferences: persistedTheme ? JSON.parse(persistedTheme) : {},
 };
 
 const store = createStore(rootReducer, initialState);

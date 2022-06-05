@@ -13,25 +13,7 @@ export const backgroundColor = theme("theme", {
   });
 
 
-const Sec = styled.section`
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(249, 232, 202, 1);
-    // background-image: url(${bg});
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    flex-direction: column;
-    @media only screen and (max-width: 998px) {
-        min-height: 100vh;
-        width: 100%;
-        padding: 2rem 0;
-        flex-direction: column;
-        background-size: auto 100%;
-      }
-`;
+
 
 const Width = styled.div`
       width: 1300px;
@@ -127,7 +109,29 @@ const Hs = styled(H)`
       }
 `;
 
-const Page4 = () => {
+const Page4 = (props) => {
+
+  const Sec = styled.section`
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(249, 232, 202, 1);
+    // background-image: url(${bg});
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    padding: ${props.big ? '6rem 0 10rem 0' : '2rem 0'};
+
+    @media only screen and (max-width: 998px) {
+        min-height: 100vh;
+        width: 100%;
+        padding: 2rem 0;
+        flex-direction: column;
+        background-size: auto 100%;
+      }
+`;
 
     return (
         <Sec id="core">

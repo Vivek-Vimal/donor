@@ -15,28 +15,7 @@ export const backgroundColor = theme("theme", {
     dark: "#E5E5E5",
   });  
 
-const Sec = styled.section`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    min-height: 70rem;
-    background-image: url(${mainBg});
-    background-size: 100% 50rem;
-    background-repeat: no-repeat;
-    background-color: rgba(249, 232, 202, 1) ;
-    width: 100%;
-    @media only screen and (max-width: 1200px) {
-        background-size: 150% 50rem;
-        background-position: center center;
-    }
-    @media only screen and (max-width: 768px) {
-        min-height: auto;
-        width: 100%;
-        padding: 2rem 0;
-        background-size: 200% 50rem;
-    }
-`;
+
 
 const Width = styled.div`
       width: 1300px;
@@ -101,7 +80,31 @@ const resposive =  {
   }
 
 
-const Page3 = () => {
+const Page3 = (props) => {
+
+    const Sec = styled.section`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 70rem;
+    background-image: url(${mainBg});
+    background-size: 100% 50rem;
+    background-repeat: no-repeat;
+    background-color: rgba(249, 232, 202, 1) ;
+    width: 100%;
+    padding: ${props.big ? '6rem 0 0 0': ''};
+    @media only screen and (max-width: 1200px) {
+        background-size: 150% 50rem;
+        background-position: center center;
+    }
+    @media only screen and (max-width: 768px) {
+        min-height: auto;
+        width: 100%;
+        padding: 2rem 0;
+        background-size: 200% 50rem;
+    }
+`;
 
     return (
         <Sec>
