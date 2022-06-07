@@ -30,7 +30,7 @@ const StyledFooter = styled.div`
     }
 `
 const IconContainer = styled.div`
-  
+  margin: 0 3rem 0 0;
 `
 const Left = styled.div`
     display: flex;
@@ -46,11 +46,16 @@ const Left = styled.div`
     }
 `
 const Mid = styled.div`
-    display: grid;
-    width: 30rem;
+    display: flex;
+    width: 998px;
+    justify-content: space-between;
+    padding: 0 0.5rem;
 
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    place-items: center;
+    @media only screen and (max-width: 1100px) {
+        width: 90%;
+       
+        
+    }
     @media only screen and (max-width: 610px) {
         width: 99%;
        
@@ -72,26 +77,32 @@ const Right = styled.div`
 `
 const Link1 = styled(Link)`
     
-    width: 4rem;
-    height: 4rem;
+ 
    cursor: pointer;
+   display: flex;
+   align-items: center;
+   font-size: 3.5rem;
+   color: rgba(249,232,202,0.9);
     @media only screen and (max-width: 998px) {
         margin-right: 6rem  !important;
         width: 16rem;
         height: auto;
     }
     @media only screen and (max-width: 768px) {
-        margin-right: 3rem  !important;
+       // margin-right: 3rem  !important;
         width: 10rem;
+        font-size: 1.5rem;
     }
     `
 const Upper = styled.div`
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
    
-    place-items: center;
+    //place-items: center;
     width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    padding: 0 0 0 2rem;
+    // grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    // padding: 0 0 0 2rem;
     
     @media only screen and (max-width: 610px) {
         grid-template-columns: repeat(auto-fit, minmax(99%, 1fr));
@@ -138,44 +149,43 @@ const Footer = () => {
             <Upper>
     
                 <Left>
+                    <T style={{color:' rgba(249,232,202,0.7)',fontSize:'1rem'}}>Copyright @ 2022. All rights reserved</T>
                     <IconContainer>
-                        <Link1 style={{margin:"0"}} to="home" spy={true} smooth={true} ><img src='/yellow.png' alt="Logo" style={{width:"4rem",height:"4rem"}} /></Link1>
-                        <T style={{fontSize:'1rem',lineHeight:'1.6'}}>
-                            We ara a lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat... 
-                        </T>
+                        <Link1 style={{margin:"0"}} to="home" spy={true} smooth={true} >
+                            <img src='/yellow.png' alt="Logo" style={{width:"10rem",height:"9rem"}} />
+                            Donor
+                        </Link1>
                     </IconContainer> 
                    
                 </Left>
     
                 <Mid>
                     <div style={{margin:'2rem 0 0 0'}}>
-                        <H style={{fontSize:'1.6rem',fontWeight:'500',margin:'0 0 1rem 0'}}>About</H>
-                        <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400'}}>Contact us</T>
-                        <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400'}}>Contact us</T>
-                        <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400'}}>Contact us</T>
-                        <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400'}}>Contact us</T>
-                        <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400'}}>Contact us</T>
-                        <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400'}}>Contact us</T>
+                        <H style={{fontSize:'1.6rem',fontWeight:'500',margin:'0 0 1rem 0',color:' rgba(249,232,202,0.9)'}}>Connect</H>
+                        <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400',color:' rgba(249,232,202,0.8)'}}>Telegram</T>
+                        <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400',color:' rgba(249,232,202,0.8)'}}>Reddit</T>
+                        <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400',color:' rgba(249,232,202,0.8)'}}>Discord</T>
+                        <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400',color:' rgba(249,232,202,0.8)'}}>Twitter</T>
+                        {/* <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400'}}>Contact us</T>
+                        <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400'}}>Contact us</T> */}
                     </div>
                     <div  style={{margin:'2rem 0 0 0'}}>
-                        <H style={{fontSize:'1.6rem',fontWeight:'500',margin:'0 0 1rem 0'}}>About</H>
+                        <H style={{fontSize:'1.6rem',fontWeight:'500',margin:'0 0 1rem 0',color:' rgba(249,232,202,0.9)'}}>Learn</H>
+                        <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400',color:' rgba(249,232,202,0.8)'}}>Medium</T>
+                        {/* <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400'}}>Contact us</T>
                         <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400'}}>Contact us</T>
                         <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400'}}>Contact us</T>
                         <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400'}}>Contact us</T>
-                        <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400'}}>Contact us</T>
-                        <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400'}}>Contact us</T>
-                        <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400'}}>Contact us</T>
+                        <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400'}}>Contact us</T> */}
                     </div>
                     <div  style={{margin:'2rem 0 0 0'}}>
-                        <H style={{fontSize:'1.6rem',fontWeight:'500',margin:'0 0 1rem 0'}}>About</H>
+                        <H style={{fontSize:'1.6rem',fontWeight:'500',margin:'0 0 1rem 0',color:' rgba(249,232,202,0.9)'}}>Build</H>
+                        <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400',color:' rgba(249,232,202,0.8)'}}>Docs</T>
+                        <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400',color:' rgba(249,232,202,0.8)'}}>Github</T>
+                        <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400',color:' rgba(249,232,202,0.8)'}}>Disclaimer</T>
+                        {/* <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400'}}>Contact us</T>
                         <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400'}}>Contact us</T>
-                        <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400'}}>Contact us</T>
-                        <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400'}}>Contact us</T>
-                        <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400'}}>Contact us</T>
-                        <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400'}}>Contact us</T>
-                        <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400'}}>Contact us</T>
+                        <T style={{color:'rgba(153, 156, 165, 1)',margin:'0',fontSize:'1rem',fontWeight:'400'}}>Contact us</T> */}
                     </div>
                 </Mid>
     
@@ -227,15 +237,15 @@ const Footer = () => {
             <Line />
     
             <div style={{padding:'0 1rem '}}>
-              <H>
+              <H style={{margin:'0 0 1rem 0',color:' rgba(249,232,202,0.9)'}}>
               Disclaimer:</H>
-              <T>
+              <T style={{color:' rgba(249,232,202,0.7)'}} >
                 The Information provided on this website does not constitute investment advice, financial advice, trading advice, or any other sort of advice, and you should not treat any of the website's content as such. The DONOR team provides the website as a service to the public, and is not resonsible for, and expressly disclaims all liabilty for, damages of any kind arising out of use, reference to, or reliance on any information contained within this website. While the information contained within this website is periodically updated, no quarantee is given that the information provided in this webiste is correct, complete and up-to-date.
               </T>
     
             </div>
     
-            <Lower>
+            {/* <Lower>
                 <div style={{color:'#fff'}}>
                 © 2000-2021,<span style={{color:'rgba(2, 169, 92, 1)'}}> Donor</span>  All Rights Reserved
                 </div>
@@ -261,7 +271,7 @@ const Footer = () => {
                     </svg>
     
                 </SocialMedia>
-            </Lower>
+            </Lower> */}
            
         </StyledFooter>
         </Sec>

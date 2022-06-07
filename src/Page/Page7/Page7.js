@@ -98,7 +98,7 @@ const Page2 = () => {
           <Width>
 
           <Ts> 
-            Raise Capital across all main blockchain networks
+            We will be on all main blockchain networks shortly
           </Ts>
 
         <IconContainer>

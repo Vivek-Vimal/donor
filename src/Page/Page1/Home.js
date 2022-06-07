@@ -17,7 +17,7 @@ import { Button } from '../../components/Navbar/Navbar';
 
 const HomePage = styled.section`
   display: flex;
-  flex-direction: row;
+  //flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
   min-height: 100vh;
@@ -36,7 +36,7 @@ const HomePage = styled.section`
 const Width = styled.div`
       width: 1300px;
       display: flex;
-        padding: 3rem 0 0 0;
+      //  padding: 3rem 0 0 0;
         align-items: center;
         justify-content: space-between;
   
@@ -45,21 +45,21 @@ const Width = styled.div`
     }
     @media only screen and (max-width: 1100px) {
         flex-direction: column;
-        margin: 6rem  0 0 0;
+       margin: 7rem  0 0 0;
     }
 
     @media only screen and (max-width: 510px) {
       width: 98%;
-      margin: 4rem  0 0 0;
+      //margin: 4rem  0 0 0;
   }
 `
 
 const Left = styled(motion.div)`
-        width: 60%;
-      
+        width: 55%;
+     // background: red;
 
           @media only screen and (max-width: 1100px) {
-            width: 60%;
+            width: 50%;
         }
         @media only screen and (max-width: 998px) {
             width: 85%;
@@ -107,6 +107,8 @@ const Ht = styled.h1`
     font-size: 4.5rem;
     margin-bottom: 2rem;
     text-align: left;
+    font-family: 'PT Serif', serif !important;
+    line-height: 1;
 
     @media only screen and (max-width: 1300px) {
       font-size: 4rem;
@@ -122,7 +124,7 @@ const Ht = styled.h1`
 
     @media only screen and (max-width: 768px) {
         font-weight: 510;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         font-weight: bold;
       }
 `;
@@ -130,10 +132,10 @@ const Ht = styled.h1`
 const T = styled.p`
     
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
     text-align: left;
-    font-family: 'Nunito Sans', sans-serif;
+   // font-family: 'Nunito Sans', sans-serif;
     @media only screen and (max-width: 768px) {
         font-weight: 510;
         font-size: 1rem;
@@ -147,8 +149,10 @@ const ButtonContainer = styled.div`
         
         justify-content: space-between;
      width: 22rem;
+     margin: 3rem 0 0 0;
      @media only screen and (max-width: 768px) {
       width: 98%;
+      flex-direction: column;
     }
 `
 
@@ -173,6 +177,16 @@ const ShowButton = styled(Link)`
     bottom: 5rem;
     }
     
+`
+const ButtonR = styled(Button)`
+  margin: 0 0 0 1rem;
+  box-shadow: none;
+  color: rgba(0, 29, 35, 1);
+  background: transparent;
+  border: 2px solid rgba(176, 163, 144, 1);
+  @media only screen and (max-width: 768px) {
+    margin: 1rem 0 0 0;
+  }
 `
 
 const Home = () => {
@@ -204,15 +218,17 @@ const Home = () => {
           
           <Width>
               <Left>
-                <Ht>Support The <br/> Cause Thats Close <div style={{color:'rgba(2, 169, 92, 1)'}}> To Your Heart</div> </Ht>
-                <T>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> Consequat massa, tincidunt eget </T>
+                <Ht>Support the <br/> cause thats close <div style={{color:'rgba(2, 169, 92, 1)',fontFamily:'PT Serif'}}> to your heart</div> </Ht>
+                <T> <span style={{color:'rgba(2, 169, 92, 1)'}}>People-powered philanthropy</span> bestowing earnings while connecting donors of <span style={{color:'rgba(2, 169, 92, 1)'}}>cryptocurrencies</span> with grassroot not-for-profit fundraising <span style={{color:'rgba(2, 169, 92, 1)'}} >around the world</span></T>
                 <ButtonContainer>
-                  <Button style={{padding:'0 2.5rem'}}>
-                    Explore
+                  <Button style={{padding:'0 1rem',minWidth:'11rem'}}>
+                    <a href='http://donor-vaults.s3-website-us-west-2.amazonaws.com/#/avax'
+                      style={{color:'#FFF',textDecoration:'none'}}
+                    >Govern & Earn</a>
                   </Button>
-                  <Button style={{margin:'0 0 0 1rem',boxShadow:'none',color:'rgba(0, 29, 35, 1)', background: 'transparent',border:'2px solid rgba(176, 163, 144, 1)'}}>
+                  <ButtonR>
                     Philanthropy
-                  </Button>
+                  </ButtonR>
                 </ButtonContainer>
               </Left>
             

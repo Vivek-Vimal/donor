@@ -5,7 +5,7 @@ import Tilt from 'react-parallax-tilt';
 import bg from './bg.svg'
 import g from './img.jpg'
 import theme from "styled-theming";
-import left from './donnor.jpg'
+import left from './donor.png'
 import right from './pic.svg'
 import { motion } from 'framer-motion'
 import { H } from '../Page2/Page2';
@@ -58,32 +58,32 @@ const Width = styled.div`
 
 const Left = styled(motion.div)`
         width: 30rem;
-        height: 40rem;
+        height: 30rem;
         background-image: url(${left});
         background-size: 100% 100%;
         background-repeat: no-repeat;
         border-radius: 1rem;
         
-        @media only screen and (max-width: 1700px) {
-            height: 35rem;
-          }
+        // @media only screen and (max-width: 1700px) {
+        //     height: 35rem;
+        //   }
 
           @media only screen and (max-width: 1100px) {
             width: 30rem;
-            height: 40rem;
+            height: 30rem;
             
         }
         @media only screen and (max-width: 998px) {
           width: 20rem;
-          height: 30rem;
+          height: 20rem;
         }
 
-    @media only screen and (max-width: 768px) {
+    // @media only screen and (max-width: 768px) {
      
-        width: 85%;
-        height: 20rem;
+    //     width: 85%;
+    //     height: 25rem;
        
-      }
+    //   }
 `;
 
 const Right = styled.div`
@@ -110,8 +110,8 @@ const Right = styled.div`
 
 export const T = styled.p`
     color: rgba(0, 29, 35, 1);
-    font-weight: 400;
-    font-size: 1.1rem;
+    font-weight: bold;
+    font-size: 1.25rem;
     margin-bottom: 2rem;
     text-align: left;
     line-height: 1.6;
@@ -156,7 +156,9 @@ const Heading = styled.div`
     color: rgba(2, 169, 92, 1);
     font-size: 1.4rem;
     font-weight: bold;
-      text-align: left;
+    text-align: center;
+    // width: 10rem;
+    //  background: red;
     background-image: url(${bg});
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -179,6 +181,11 @@ color: #000000;
       }
 `;
 
+const HeadingContainer = styled.div`
+  width: 14rem;
+ // background: red;
+`
+
 const Page3a = () => {
   
     return (
@@ -192,15 +199,19 @@ const Page3a = () => {
                 />
 
                 <Right>
+
+                  <HeadingContainer>
                     <Heading>
                       Why DONOR
                     </Heading>
+                  
                     <Hs>
                       Why DONOR
                     </Hs>
+                  </HeadingContainer>
                       
                     <T>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus sed eu in ultrices. Sapien convallis dictumst accumsan elit semper in bibendum. Risus hendrerit massa volutpat eu risus tellus sit. In in sed massa faucibus proin ultrices ornare amet nibh.   
+                      DONOR is community-driven with decisions recorded and enforced by smart contracts on the blockchain. Every donation's utilization is verified and audited.
                     </T>
 
                     <Founder>
@@ -212,16 +223,23 @@ const Page3a = () => {
                         <TiTick color='#fff' style={{fontSize:'2rem'}}/>
                         <span style={{margin:'0.2rem 0 0 0'}}>We're Successful Institute</span>
                       </div>
-
+                      <div style={{display:'flex',alignItems:'center',color:'#fff',fontWeight:'bold'}}>
+                        <TiTick color='#fff' style={{fontSize:'2rem'}}/>
+                        <span style={{margin:'0.2rem 0 0 0'}}>We're Successful Institute</span>
+                      </div>
+                      <div style={{display:'flex',alignItems:'center',color:'#fff',fontWeight:'bold'}}>
+                        <TiTick color='#fff' style={{fontSize:'2rem'}}/>
+                        <span style={{margin:'0.2rem 0 0 0'}}>We're Successful Institute</span>
+                      </div>
                       
-                        <div style={{display:'flex',alignItems:'center',color:'#fff',fontWeight:'bold',margin:'1rem 0 0 3rem'}}>
+                        {/* <div style={{display:'flex',alignItems:'center',color:'#fff',fontWeight:'bold',margin:'1rem 0 0 3rem'}}>
                           <img src={right} alt='' style={{height:'4rem',width:'4rem'}} />
                           <div style={{margin:'0 0 0 1.5rem'}}>
                             Michel H. Heart
                             <br/> 
                             CEO & Founder
                           </div>
-                        </div>
+                        </div> */}
                       
                     </Founder>
                    

@@ -26,7 +26,8 @@ export const Link1 = styled(RouterLink)`
   text-decoration: none;
   color: #000;
   cursor: pointer;
-  font-size: 2.4rem;
+  font-size: 1.8rem;
+ // background:red;
   font-family: 'Roboto Condensed', sans-serif;
   @-webkit-keyframes hvr-pulse {
     25% {
@@ -128,7 +129,7 @@ export const Button = styled(motion.button)`
 
 export const IconContainer = styled.div`
   
-  margin-right: 8vw;
+  margin: 0 8vw 0 2rem;
   @media only screen and (max-width: 1600px) {
     margin: 0 1rem 0 0;
   }
@@ -142,6 +143,11 @@ export const IconContainer = styled.div`
 `
 export const Image = styled(motion.img)`
   cursor: pointer;
+`
+const RightContainer = styled.div`
+  display: flex;
+  //background: red;
+  align-items: center;
 `
 
 const Navbar = () => {
@@ -174,40 +180,41 @@ const changeBackground = () => {
         <nav className={navbar ?  "navActiveLight": "nav"} >
 
          
-            <Link1 to="/" spy={true} smooth={true} ><img src={logo} alt="Logo" className={navbar ? "LogoActive" : "Logo"} /> Donor</Link1>
+          <Link1 to="/" spy={true} smooth={true} ><img src={logo} alt="Logo" className={navbar ? "LogoActive" : "Logo"} /> <span style={{margin:'0.4rem 0 0 0'}}>Donor</span></Link1>
           
-          {/* <Mobile>
-            <Link1 to="home" spy={true} smooth={true} style={{marginRight:"0"}} ><img src={mlogo} alt="mlogo" className="LogoB"/></Link1>
-          </Mobile> */}
-          <PC>
-            <ul className="list">
-                <Hr href="http://donor-vaults.s3-website-us-west-2.amazonaws.com/#/avax" spy={true} smooth={true} offset={-80}>Vault</Hr>
-                <Link2 to="/earn" spy={true} smooth={true} offset={-80}>Earn</Link2>
-                <Link2 to="/donate" spy={true} smooth={true} offset={-80}>Donate</Link2>
-                <Link2 to="/fund" spy={true} smooth={true} offset={-80}>Fundraise for</Link2> 
-                <Link2 to="/docs" spy={true} smooth={true} offset={-80}>Docs</Link2>
-                <Link2 to="/work" spy={true} smooth={true} offset={-80}>How It Works</Link2> 
-            </ul> 
-          </PC>
+          <RightContainer>
+        
+            <PC>
+              <ul className="list">
+                  <Hr href="http://donor-vaults.s3-website-us-west-2.amazonaws.com/#/avax" spy={true} smooth={true} offset={-80}>Vault</Hr>
+                  <Link2 to="/earn" spy={true} smooth={true} offset={-80}>Earn</Link2>
+                  <Link2 to="/donate" spy={true} smooth={true} offset={-80}>Donate</Link2>
+                  <Link2 to="/fund" spy={true} smooth={true} offset={-80}>Fundraise for</Link2> 
+                  <Link2 to="/docs" spy={true} smooth={true} offset={-80}>Docs</Link2>
+                  <Link2 to="/work" spy={true} smooth={true} offset={-80}>How It Works</Link2> 
+              </ul> 
+            </PC>
+
+            
+            <div style={{display:'flex'}}>
+              <IconContainer>
+                <Button 
+                    type="button"
+                    whileHover={{ scale: 1.1,boxShadow:"0 0 25px #ff7b00"}}
+                    whileTap={{ scale: 0.7 }}
+                >Connect Wallet</Button>
+              </IconContainer> 
 
           
-          <div style={{display:'flex'}}>
-            <IconContainer>
-              <Button 
-                  type="button"
-                  whileHover={{ scale: 1.1,boxShadow:"0 0 25px #ff7b00"}}
-                  whileTap={{ scale: 0.7 }}
-              >Connect Wallet</Button>
-            </IconContainer> 
-         
-        
-          <Mobile ref={node}>
-            <FocusLock disabled={!open}>
-              <Burger  open={open} setOpen={setOpen} aria-controls={menuId} />
-              <Menu open={open} setOpen={setOpen} id={menuId} />
-            </FocusLock>
-          </Mobile>
-        </div>
+            <Mobile ref={node}>
+              <FocusLock disabled={!open}>
+                <Burger  open={open} setOpen={setOpen} aria-controls={menuId} />
+                <Menu open={open} setOpen={setOpen} id={menuId} />
+              </FocusLock>
+            </Mobile>
+          </div>
+
+        </RightContainer>
 
         </nav>   
     )

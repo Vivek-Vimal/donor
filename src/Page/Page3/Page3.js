@@ -54,7 +54,8 @@ const Center = styled.div`
         margin: 0 0 5rem 0;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     @media only screen and (max-width: 1400px) {
-        width: 95%;
+        width: 100%;
+        margin-top: 2rem;
     }
     @media only screen and (max-width: 1100px) {
         flex-direction: column;
@@ -83,17 +84,17 @@ const resposive =  {
 const Page3 = (props) => {
 
     const Sec = styled.section`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    min-height: 70rem;
-    background-image: url(${mainBg});
-    background-size: 100% 50rem;
-    background-repeat: no-repeat;
-    background-color: rgba(249, 232, 202, 1) ;
-    width: 100%;
-    padding: ${props.big ? '6rem 0 0 0': ''};
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        min-height: 70rem;
+        background-image: url(${mainBg});
+        background-size: 100% 50rem;
+        background-repeat: no-repeat;
+        background-color: rgba(249, 232, 202, 1) ;
+        width: 100%;
+        padding: ${props.big ? '6rem 0 0 0': ''};
     @media only screen and (max-width: 1200px) {
         background-size: 150% 50rem;
         background-position: center center;

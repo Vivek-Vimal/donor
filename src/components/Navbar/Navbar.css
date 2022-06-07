@@ -23,7 +23,7 @@
             top: 0;
             z-index: 10;
             transition:  0.5s linear;
-          background-color: rgba(249, 232, 202, 0.8);
+          background-color: rgba(249, 232, 202, 0.9);
             padding-bottom: .8rem;
         }
      
@@ -38,13 +38,13 @@
           font-size: 2rem;
         }
         .Logo{
-            width: 9rem;
+            width: 5rem;
             transition:  0.5s linear;
             margin: 0.8rem 0 0 0;
         }
 
         .LogoActive{
-          width: 9rem;
+          width: 5rem;
           transition:  0.5s linear;
           margin: 0.6rem 0 0 0;
       }
@@ -188,7 +188,7 @@
               /* padding-left: 2rem; */
               height: 4rem;
               position: fixed;
-              background: rgba(229, 229, 229, 0.85);
+              background: rgba(229, 229, 229, 0.9);
               z-index: 10;
               opacity: 1;
               flex-direction: row;

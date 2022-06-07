@@ -21,8 +21,8 @@ const Width = styled.div`
    display: flex;
    flex-direction: column;
 
-    align-items: center;
-    justify-content: center;
+    //align-items: center;
+    //justify-content: center;
      
     @media only screen and (max-width: 1300px) {
         width: 98%;
@@ -31,7 +31,7 @@ const Width = styled.div`
 `;
 
 const StyleCard = styled.div`
-      width: 1600px;
+      width: 1300px;
       display: grid;
     
       grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
@@ -41,6 +41,8 @@ const StyleCard = styled.div`
         width: 98%;
      
       }
+
+
       @media only screen and (max-width: 510px) {
     
         width: 100%;
@@ -53,12 +55,16 @@ const Heading = styled.div`
     font-size: 1.6rem;
 
     background-image: url(${bg});
+    // background: red;
+     width: 30rem;
+     text-align: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     @media only screen and (max-width: 768px) {
         font-weight: 510;
         font-size: 1.2rem;
         font-weight: bold;
+        width: 95%;
       }
 `;
 
@@ -168,6 +174,7 @@ const Page4 = (props) => {
                       led by a certified project manager
                     </T>
                   </div>
+
                   <div style={{width:'20rem',display:'grid',placeItems:'center',justifySelf:'center'}}>
                     <H style={{color:'#FFFFFF',textAlign:'center',margin:'0'}}>5,234</H>
                     <Hs style={{color:'#FFFFFF',textAlign:'center',
@@ -179,6 +186,7 @@ const Page4 = (props) => {
                       led by a certified project manager
                     </T>
                   </div>
+
                   <div style={{width:'20rem',display:'grid',placeItems:'center',justifySelf:'center'}}>
                     <H style={{color:'#FFFFFF',textAlign:'center',margin:'0'}}>5,234</H>
                     <Hs style={{color:'#FFFFFF',textAlign:'center',
