@@ -56,7 +56,7 @@ const Heading = styled.div`
 
     background-image: url(${bg});
     // background: red;
-     width: 30rem;
+     width: 22rem;
      text-align: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -143,11 +143,11 @@ const Page4 = (props) => {
         <Sec id="core">
           <Width>
             <Heading>
-              Live Project
+              Donate To
             </Heading>
             <Hs
               style={{color:'#000000'}}>
-                Ongoing Fundraising Projects
+                Ongoing Fundraisers
             </Hs>
           </Width>
 

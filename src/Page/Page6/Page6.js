@@ -69,8 +69,9 @@ const Heading = styled.div`
     font-weight: bold;
       text-align: left;
     background-image: url(${bg});
-    background-size: 100% 100%;
+    background-size: 50% 100%;
     background-repeat: no-repeat;
+    background-position: center center;
     @media only screen and (max-width: 768px) {
         font-weight: 510;
         font-size: 1.2rem;
@@ -83,10 +84,10 @@ const Page6 = () => {
         <Sec id="roadmap">
             
             <Heading>
-             +News
+            Where you can help
                     </Heading>
                     <Hs>
-                    Update News
+                      Featured Specials
                     </Hs>
 
             <GridAuto>

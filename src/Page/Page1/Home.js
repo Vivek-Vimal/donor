@@ -183,6 +183,7 @@ const ButtonR = styled(Button)`
   box-shadow: none;
   color: rgba(0, 29, 35, 1);
   background: transparent;
+  min-width: 15rem;
   border: 2px solid rgba(176, 163, 144, 1);
   @media only screen and (max-width: 768px) {
     margin: 1rem 0 0 0;
@@ -218,16 +219,16 @@ const Home = () => {
           
           <Width>
               <Left>
-                <Ht>Support the <br/> cause thats close <div style={{color:'rgba(2, 169, 92, 1)',fontFamily:'PT Serif'}}> to your heart</div> </Ht>
-                <T> <span style={{color:'rgba(2, 169, 92, 1)'}}>People-powered philanthropy</span> bestowing earnings while connecting donors of <span style={{color:'rgba(2, 169, 92, 1)'}}>cryptocurrencies</span> with grassroot not-for-profit fundraising <span style={{color:'rgba(2, 169, 92, 1)'}} >around the world</span></T>
+                <Ht>Support the cause thats close <div style={{color:'rgba(2, 169, 92, 1)',fontFamily:'PT Serif'}}> to your heart</div> </Ht>
+                <T> <span style={{color:'rgba(2, 169, 92, 1)'}}>People-powered philanthropy</span> bestowing earnings while connecting donors of <span style={{color:'rgba(2, 169, 92, 1)'}}>cryptocurrencies</span> with grassroot not-for-profit fundraising <span style={{color:'rgba(2, 169, 92, 1)'}} >around the world...</span></T>
                 <ButtonContainer>
                   <Button style={{padding:'0 1rem',minWidth:'11rem'}}>
                     <a href='http://donor-vaults.s3-website-us-west-2.amazonaws.com/#/avax'
                       style={{color:'#FFF',textDecoration:'none'}}
-                    >Govern & Earn</a>
+                    >Donate</a>
                   </Button>
                   <ButtonR>
-                    Philanthropy
+                    Start a Fundraiser
                   </ButtonR>
                 </ButtonContainer>
               </Left>

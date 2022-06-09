@@ -217,19 +217,23 @@ const Page3a = () => {
                     <Founder>
                       <div style={{display:'flex',alignItems:'center',color:'#fff',fontWeight:'bold'}}>
                         <TiTick color='#fff' style={{fontSize:'2rem'}}/>
-                        <span style={{margin:'0.2rem 0 0 0'}}>Non-Profite Crowdfunding Agency</span>
+                        <span style={{margin:'0.2rem 0 0 0'}}> Strong Token Utility</span>
                       </div>
                       <div style={{display:'flex',alignItems:'center',color:'#fff',fontWeight:'bold'}}>
                         <TiTick color='#fff' style={{fontSize:'2rem'}}/>
-                        <span style={{margin:'0.2rem 0 0 0'}}>We're Successful Institute</span>
+                        <span style={{margin:'0.2rem 0 0 0'}}>Platform Earnings to Community</span>
                       </div>
                       <div style={{display:'flex',alignItems:'center',color:'#fff',fontWeight:'bold'}}>
                         <TiTick color='#fff' style={{fontSize:'2rem'}}/>
-                        <span style={{margin:'0.2rem 0 0 0'}}>We're Successful Institute</span>
+                        <span style={{margin:'0.2rem 0 0 0'}}>Community Governed</span>
                       </div>
                       <div style={{display:'flex',alignItems:'center',color:'#fff',fontWeight:'bold'}}>
                         <TiTick color='#fff' style={{fontSize:'2rem'}}/>
-                        <span style={{margin:'0.2rem 0 0 0'}}>We're Successful Institute</span>
+                        <span style={{margin:'0.2rem 0 0 0'}}>First Cryptocurrency Donation Platform</span>
+                      </div>
+                      <div style={{display:'flex',alignItems:'center',color:'#fff',fontWeight:'bold'}}>
+                        <TiTick color='#fff' style={{fontSize:'2rem'}}/>
+                        <span style={{margin:'0.2rem 0 0 0'}}>Accepts Any Tradable Cryptocurrency</span>
                       </div>
                       
                         {/* <div style={{display:'flex',alignItems:'center',color:'#fff',fontWeight:'bold',margin:'1rem 0 0 3rem'}}>

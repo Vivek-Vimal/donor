@@ -22,11 +22,11 @@ const Sec = styled.section`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    min-height:  40rem;
+    min-height:  45rem;
     background-color: rgba(249, 232, 202, 1) ;
     width: 100%;
   
-    padding: 12rem 0 0 0;
+    padding: 10rem 0 0 0;
     
     @media only screen and (max-width: 768px) {
         
@@ -94,11 +94,15 @@ const Page2 = () => {
         <Sec id="rarity">
 
             <Center>
-              <H>Donor Vaults</H>
-              <T>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus sed eu in ultrices. Sapien convallis 
-                dictumst accumsan elit semper in bibendum. Risus hendrerit massa volutpat </T>
+              <H>How are we different</H>
+              <T>
+                We are like "gofundme" of the crypto-world. The differences between
+                DONOR and GOFUNDME are - we help people from any part of the world,
+                we ensure each cent is utilised for the purpose, and all on a
+                blockchain platform managed by the community.
+              </T>
               <Button style={{width:'13rem'}}>
-                Stake in Vaults
+                Donate now
               </Button>
             </Center>
 

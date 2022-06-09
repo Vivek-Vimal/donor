@@ -119,7 +119,7 @@ export const Button = styled(motion.button)`
   background-color: rgba(2, 169, 92, 1);
   border: none;
   border-radius: 2rem;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   color: #FFF;
   font-size: 1.2rem;
   height: 3.5rem;
@@ -180,16 +180,16 @@ const changeBackground = () => {
         <nav className={navbar ?  "navActiveLight": "nav"} >
 
          
-          <Link1 to="/" spy={true} smooth={true} ><img src={logo} alt="Logo" className={navbar ? "LogoActive" : "Logo"} /> <span style={{margin:'0.4rem 0 0 0'}}>Donor</span></Link1>
+          <Link1 to="/" spy={true} smooth={true} ><img src={logo} alt="Logo" className={navbar ? "LogoActive" : "Logo"} /> <span style={{margin:'0.5rem 0 0 -0.5rem'}}>Donor</span></Link1>
           
           <RightContainer>
         
             <PC>
               <ul className="list">
-                  <Hr href="http://donor-vaults.s3-website-us-west-2.amazonaws.com/#/avax" spy={true} smooth={true} offset={-80}>Vault</Hr>
-                  <Link2 to="/earn" spy={true} smooth={true} offset={-80}>Earn</Link2>
-                  <Link2 to="/donate" spy={true} smooth={true} offset={-80}>Donate</Link2>
-                  <Link2 to="/fund" spy={true} smooth={true} offset={-80}>Fundraise for</Link2> 
+                  <Hr href="http://donor-vaults.s3-website-us-west-2.amazonaws.com/#/avax" spy={true} smooth={true} offset={-80}>Staking</Hr>
+                  {/* <Link2 to="/earn" spy={true} smooth={true} offset={-80}>Earn</Link2>
+                  <Link2 to="/donate" spy={true} smooth={true} offset={-80}>Donate</Link2> */ }
+                  <Link2 to="/fund" spy={true} smooth={true} offset={-80}>Governance</Link2>  
                   <Link2 to="/docs" spy={true} smooth={true} offset={-80}>Docs</Link2>
                   <Link2 to="/work" spy={true} smooth={true} offset={-80}>How It Works</Link2> 
               </ul> 
@@ -202,7 +202,7 @@ const changeBackground = () => {
                     type="button"
                     whileHover={{ scale: 1.1,boxShadow:"0 0 25px #ff7b00"}}
                     whileTap={{ scale: 0.7 }}
-                >Connect Wallet</Button>
+                >Launch App</Button>
               </IconContainer> 
 
           

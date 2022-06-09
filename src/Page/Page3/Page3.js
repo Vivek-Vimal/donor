@@ -112,11 +112,10 @@ const Page3 = (props) => {
 
             <Width>
             <Center>
-              <H>Donor Vaults</H>
-              <T>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus sed eu in ultrices. Sapien convallis 
-                dictumst accumsan elit semper in bibendum. Risus hendrerit massa volutpat </T>
+              <H>Anyone from anywhere can ask help'</H>
+              <T>Any sincere and committed individual or group or institution from anywhere in the world can fundraise for self or for a cause. </T>
               <Button style={{width:'13rem'}}>
-                Stake in Vaults
+                Fundraise now
               </Button>
             </Center>
 

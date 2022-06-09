@@ -55,7 +55,7 @@
             display: flex;
             justify-content: space-between;
             /* background: aqua; */
-            width: 55rem;
+            width: 45rem;
             text-decoration: none;
             /* font-size: 1rem !important ; */
             /* margin-right: 10rem; */
@@ -142,7 +142,7 @@
             color: #000 !important;
             position: relative;
             text-decoration: none;
-            font-size: 1.2rem;
+            /* font-size: 1.2rem; */
             font-weight: 550;
           }
 
@@ -152,16 +152,11 @@
           display: flex;
           justify-content: space-between;
           /* background: aqua; */
-          width: 45rem;
+          width: 40rem;
           text-decoration: none;
           /* font-size: 1rem !important ; */
-          /* margin-right: 10rem; */
-      }
-
+          margin-right: 3rem;      }
         }
-       
-        
-
        
 
         @media(max-width: 1200px){

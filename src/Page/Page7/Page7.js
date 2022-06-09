@@ -98,7 +98,7 @@ const Page2 = () => {
           <Width>
 
           <Ts> 
-            We will be on all main blockchain networks shortly
+            We will be on all the main blockchain networks shortly
           </Ts>
 
         <IconContainer>
