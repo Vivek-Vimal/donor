@@ -64,7 +64,7 @@ const Heading = styled.div`
         font-weight: 510;
         font-size: 1.2rem;
         font-weight: bold;
-        width: 95%;
+        width: 12rem;
       }
 `;
 
@@ -140,7 +140,7 @@ const Page4 = (props) => {
 `;
 
     return (
-        <Sec id="core">
+        <Sec id="fund">
           <Width>
             <Heading>
               Donate To

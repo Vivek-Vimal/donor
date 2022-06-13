@@ -8,6 +8,7 @@ import theme from "styled-theming";
 import { BsBoxArrowUp } from 'react-icons/bs';
 import { Link, animateScroll as scroll } from "react-scroll";
 import { Button } from '../../components/Navbar/Navbar';
+import { useWallet } from 'use-wallet'
 
 // const iconColor = theme("theme", {
 //     light: "linear-gradient(to right, #0f0c29, #302b63, #24243e)",
@@ -194,6 +195,33 @@ const Home = () => {
 
     const darkThemeEnabled = useSelector((state) => state.preferences.darkThemeEnabled);
     const dispatch = useDispatch();
+    const wallet = useWallet();
+
+    const renderButton = ()=>{
+      return(
+        (wallet.account) ?
+        <Button type='button'
+          style={{padding:'0 1rem',minWidth:'11rem'}}
+        onClick={() => {
+          wallet.connect();
+        }}
+        to="donate" spy={true} smooth={true} offset={150}
+        >
+          {wallet.account.slice(0, 10)}...
+        </Button>
+        :
+        <Button type='button'
+          style={{padding:'0 1rem',minWidth:'11rem'}}
+        onClick={() => {
+          wallet.connect();
+        }}
+        to="donate" spy={true} smooth={true} offset={150}
+        >
+          Donate
+        </Button>
+      )
+    
+    }
     
     const [ showButton, setShowButton ] = useState(false)
 
@@ -220,14 +248,15 @@ const Home = () => {
           <Width>
               <Left>
                 <Ht>Support the cause thats close <div style={{color:'rgba(2, 169, 92, 1)',fontFamily:'PT Serif'}}> to your heart</div> </Ht>
-                <T> <span style={{color:'rgba(2, 169, 92, 1)'}}>People-powered philanthropy</span> bestowing earnings while connecting donors of <span style={{color:'rgba(2, 169, 92, 1)'}}>cryptocurrencies</span> with grassroot not-for-profit fundraising <span style={{color:'rgba(2, 169, 92, 1)'}} >around the world...</span></T>
+                <T> <span style={{color:'rgba(2, 169, 92, 1)'}}>People-powered philanthropy</span> bestowing earnings while connecting donors of <span style={{color:'rgba(2, 169, 92, 1)'}}>cryptocurrencies</span> with grassroot not-for-profit fundraising <span style={{color:'rgba(2, 169, 92, 1)'}} >around the world.</span></T>
                 <ButtonContainer>
-                  <Button style={{padding:'0 1rem',minWidth:'11rem'}}>
-                    <a href='http://donor-vaults.s3-website-us-west-2.amazonaws.com/#/avax'
-                      style={{color:'#FFF',textDecoration:'none'}}
-                    >Donate</a>
-                  </Button>
-                  <ButtonR>
+                  {
+                  renderButton()
+                  }
+
+                  <ButtonR
+                    to="fund" spy={true} smooth={true} offset={-80}
+                  >
                     Start a Fundraiser
                   </ButtonR>
                 </ButtonContainer>

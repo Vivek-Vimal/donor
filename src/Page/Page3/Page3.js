@@ -46,7 +46,7 @@ const Center = styled.div`
         // align-items: center;
         // justify-content: space-between;
         border-radius: 1.5rem;
-        padding: 3rem;
+        padding: 3rem 20rem 3rem 3rem;
         background-image: url(${bg});
         background-size: 20rem 100%;
         background-position: right center;
@@ -58,7 +58,9 @@ const Center = styled.div`
         margin-top: 2rem;
     }
     @media only screen and (max-width: 1100px) {
-        flex-direction: column;
+       
+        padding: 3rem;
+        background-image: none;
     }
 
 `
@@ -108,13 +110,15 @@ const Page3 = (props) => {
 `;
 
     return (
-        <Sec>
+        <Sec id='donate'>
 
             <Width>
             <Center>
-              <H>Anyone from anywhere can ask help'</H>
+              <H>Anyone from anywhere can ask help</H>
               <T>Any sincere and committed individual or group or institution from anywhere in the world can fundraise for self or for a cause. </T>
-              <Button style={{width:'13rem'}}>
+              <Button
+                to="fund" spy={true} smooth={true} offset={-80}
+              style={{width:'13rem'}}>
                 Fundraise now
               </Button>
             </Center>
@@ -135,7 +139,7 @@ const Page3 = (props) => {
 
                     {data?.map(e => (
                         
-                        <Card img={e.img} name={e.name}/>
+                        <Card img={e.img} name={e.name} button={e.button}/>
                         
                     ))}
 

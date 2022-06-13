@@ -73,7 +73,7 @@ const Center = styled.div`
       background-color: rgba(0, 29, 35, 1);
       
         border-radius: 1.5rem;
-        padding: 3rem;
+        padding: 3rem 20rem 3rem 3rem;
         background-image: url(${bg});
         background-size: 20rem 100%;
         background-position: right center;
@@ -83,7 +83,9 @@ const Center = styled.div`
         width: 95%;
     }
     @media only screen and (max-width: 1100px) {
-        flex-direction: column;
+       
+        padding: 3rem;
+        background-image: none;
     }
 
 `
@@ -91,7 +93,7 @@ const Center = styled.div`
 const Page2 = () => {
   
     return (
-        <Sec id="rarity">
+        <Sec id="">
 
             <Center>
               <H>How are we different</H>
@@ -101,7 +103,9 @@ const Page2 = () => {
                 we ensure each cent is utilised for the purpose, and all on a
                 blockchain platform managed by the community.
               </T>
-              <Button style={{width:'13rem'}}>
+              <Button 
+                to="donate" spy={true} smooth={true} offset={150}
+                style={{width:'13rem'}}>
                 Donate now
               </Button>
             </Center>

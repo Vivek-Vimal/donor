@@ -109,9 +109,9 @@ const Page2 = () => {
           <Icon>
             <img src={img2} alt='' style={{width:'100%',height:'100%'}} />
           </Icon>
-          <Icon>
+          {/* <Icon>
             <img src={img3} alt='' style={{width:'100%',height:'100%'}} />
-          </Icon>
+          </Icon> */}
           <Icon>
             <img src={img4} alt='' style={{width:'100%',height:'100%'}} />
           </Icon>

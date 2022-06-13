@@ -5,9 +5,20 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import { BrowserRouter as Router } from 'react-router-dom'
+import { UseWalletProvider } from 'use-wallet';
 
 ReactDOM.render(<Router>
-    <Provider store={store}><App /></Provider>
+    <Provider store={store}>
+        <UseWalletProvider
+            chainId={1}
+            connectors={{
+              // This is how connectors get configured
+              portis: { dAppId: 'my-dapp-id-123-xyz' },
+            }}        
+        >
+            <App />
+        </UseWalletProvider>
+    </Provider>
 </Router>
 ,document.getElementById('root')
 );
