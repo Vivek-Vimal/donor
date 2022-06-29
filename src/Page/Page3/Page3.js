@@ -133,7 +133,7 @@ const Page3 = (props) => {
                 autoHeight={true}
                 paddingLeft={60}
                 responsive={resposive}
-              
+               
             >
 
 

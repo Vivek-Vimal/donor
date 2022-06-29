@@ -74,7 +74,7 @@ const Left = styled(motion.div)`
       }
 `;
 
-const Right = styled.div`
+const Right = styled(motion.div)`
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -262,7 +262,13 @@ const Home = () => {
                 </ButtonContainer>
               </Left>
             
-              <Right whileHover={{ scale: 1.1,boxShadow:"0 0 25px #ff7b00"}}>
+              <Right 
+                  initial={{ x: 0, y:0}}
+                  animate={{ x: 0, y: -15 }}
+                  transition={{ duration: 1.5, repeat: Infinity ,repeatType: "reverse",
+                  }}
+              // whileHover={{ scale: 1.1,boxShadow:"0 0 25px #ff7b00"}}
+              >
                    <img src={img} alt='' style={{width:'100%',height:'100%'}} />
               </Right>
 

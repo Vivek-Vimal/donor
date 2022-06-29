@@ -6,14 +6,14 @@ import { H, T } from '../Page2/Page2'
 import { FactionData } from '../config/config'
 import FactionCard from '../../components/card/FactionCard'
 import bg from './Live.svg'
+import "react-alice-carousel/lib/alice-carousel.css";
+import AliceCarousel from 'react-alice-carousel';
+import { TiArrowLeftOutline, TiArrowRightOutline } from 'react-icons/ti'
 
 export const backgroundColor = theme("theme", {
     light: "#000000",
     dark: "#E5E5E5",
   });
-
-
-
 
 const Width = styled.div`
       width: 1300px;
@@ -94,8 +94,10 @@ const Dashboard = styled.div`
     @media only screen and (max-width: 1350px) {
       width: 98%;
       display: grid;
-      grid-gap: 2rem;
+     grid-gap: 2rem;
+      //place-items: center;
       grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+      
     }
 
     @media only screen and (max-width: 1093px) {
@@ -114,6 +116,54 @@ const Hs = styled(H)`
         font-weight: bold;
       }
 `;
+
+const Mid = styled.div`
+    margin: 0 1rem;
+    @media only screen and (max-width: 1350px) {
+      margin: 0;
+    }
+`
+const First = styled.div`
+    width: 25rem;
+    @media only screen and (max-width: 1350px) {
+      width: 20rem;
+    }
+`
+const LeftArrow = styled(TiArrowLeftOutline)`
+      font-size: 4rem;
+      cursor: pointer;
+      color: rgba(2,169,92,1);
+      //margin: 0 5rem 0 0;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    
+`
+const RightArrow = styled(TiArrowRightOutline)`
+      font-size: 4rem;
+      cursor: pointer;
+      color: rgba(2,169,92,1);
+     // margin: 0 0 0 5rem;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      
+`
+
+const resposive =  {
+  0:{
+    items: 1,
+  },
+  650: {
+      items: 2,
+  },
+  1335:{
+      items: 3,
+  },
+ 
+}
 
 const Page4 = (props) => {
 
@@ -153,6 +203,17 @@ const Page4 = (props) => {
 
           <Background>
             <StyleCard>
+              <AliceCarousel
+                animationDuration={1168}
+                // disableButtonsControls={true}
+                disableDotsControls={true}
+                // autoPlayStrategy={'none'}
+                // autoHeight={true}
+                responsive={resposive}
+                mouseTracking={true}
+                renderPrevButton={()=>{return <LeftArrow/>}}
+                renderNextButton={() => { return <RightArrow/>}}
+              >
 
                 {FactionData?.map(e => (
 
@@ -160,20 +221,35 @@ const Page4 = (props) => {
 
                 ))}
 
+              </AliceCarousel>
+
             </StyleCard>
 
             <Dashboard>
-                  <div style={{width:'20rem',display:'grid',placeItems:'center',justifySelf:'center'}}>
+             
+                  <First style={{display:'grid',placeItems:'center',justifySelf:'center'}}>
                     <H style={{color:'#FFFFFF',textAlign:'center',margin:'0'}}>5,234</H>
                     <Hs style={{color:'#FFFFFF',textAlign:'center',
                       margin:'1rem 0 0.8rem 0',
                       fontSize:'1rem'}}>
                       Projects</Hs>
                     <T style={{color:'#FFFFFF',textAlign:'center',
-                    fontSize:'1rem',lineHeight:'1.5',margin:'0'}}>Of “high-performing” level are 
-                      led by a certified project manager
+                    fontSize:'1rem',lineHeight:'1.5',margin:'0'}}>
+                      Total number of Campaigns of the platform
                     </T>
-                  </div>
+                  </First>
+
+                  <Mid style={{width:'20rem',display:'grid',placeItems:'center',justifySelf:'center'}}>
+                    <H style={{color:'#FFFFFF',textAlign:'center',margin:'0'}}>5,234</H>
+                    <Hs style={{color:'#FFFFFF',textAlign:'center',
+                      margin:'1rem 0 0.8rem 0',
+                      fontSize:'1rem'}}>
+                      Projects</Hs>
+                    <T style={{color:'#FFFFFF',textAlign:'center',
+                    fontSize:'1rem',lineHeight:'1.5',margin:'0'}}>
+                      Total Ongoing Campaigns
+                    </T>
+                  </Mid>
 
                   <div style={{width:'20rem',display:'grid',placeItems:'center',justifySelf:'center'}}>
                     <H style={{color:'#FFFFFF',textAlign:'center',margin:'0'}}>5,234</H>
@@ -182,22 +258,12 @@ const Page4 = (props) => {
                       fontSize:'1rem'}}>
                       Projects</Hs>
                     <T style={{color:'#FFFFFF',textAlign:'center',
-                    fontSize:'1rem',lineHeight:'1.5',margin:'0'}}>Of “high-performing” level are 
-                      led by a certified project manager
+                    fontSize:'1rem',lineHeight:'1.5',margin:'0'}}>
+                      Total Settled Campaigns
                     </T>
                   </div>
 
-                  <div style={{width:'20rem',display:'grid',placeItems:'center',justifySelf:'center'}}>
-                    <H style={{color:'#FFFFFF',textAlign:'center',margin:'0'}}>5,234</H>
-                    <Hs style={{color:'#FFFFFF',textAlign:'center',
-                      margin:'1rem 0 0.8rem 0',
-                      fontSize:'1rem'}}>
-                      Projects</Hs>
-                    <T style={{color:'#FFFFFF',textAlign:'center',
-                    fontSize:'1rem',lineHeight:'1.5',margin:'0'}}>Of “high-performing” level are 
-                      led by a certified project manager
-                    </T>
-                  </div>
+             
             </Dashboard>
           </Background>
 

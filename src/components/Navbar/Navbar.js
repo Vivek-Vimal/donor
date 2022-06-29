@@ -13,6 +13,7 @@ import dis from './Discord.png';
 import med from './Medium.png'
 import twi from './Twitter.png';
 import { Link as RouterLink } from 'react-router-dom'
+import { useWallet } from 'use-wallet'
 
 export const backgroundColor = theme("theme", {
   light: "#000000",
@@ -21,7 +22,7 @@ export const backgroundColor = theme("theme", {
 
 export const Link1 = styled(RouterLink)`
   display: flex;
-  margin: 0 0 0 8vw;
+  margin: 0 0 0.5rem 8vw;
   align-items: center;
   text-decoration: none;
   color: #000;
@@ -156,6 +157,7 @@ const Navbar = () => {
 
   const darkThemeEnabled = useSelector((state) => state.preferences.darkThemeEnabled);
 
+  const wallet = useWallet();
 
   const [open, setOpen] = useState(false);
   const node = useRef();
@@ -187,13 +189,19 @@ const changeBackground = () => {
           <RightContainer>
         
             <PC>
-              <ul className="list">
-                  <Hr href="http://donor-vaults.s3-website-us-west-2.amazonaws.com/#/avax" spy={true} smooth={true} offset={-80}>Staking</Hr>
+              <ul className={wallet.account ? "listWallet" : "list"}>
+                  <Hr href="http://donor-vaults.s3-website-us-west-2.amazonaws.com/#/avax" spy={true} smooth={true} offset={-80}>Campaigns</Hr>
                   {/* <Link2 to="/earn" spy={true} smooth={true} offset={-80}>Earn</Link2>
                   <Link2 to="/donate" spy={true} smooth={true} offset={-80}>Donate</Link2> */ }
-                  <Link2 to="/fund" spy={true} smooth={true} offset={-80}>Governance</Link2>  
+                  <Link2 to="/donate" spy={true} smooth={true} offset={-80}>Start a Fundraise</Link2>  
                   <Link2 to="/docs" spy={true} smooth={true} offset={-80}>Docs</Link2>
                   <Link2 to="/work" spy={true} smooth={true} offset={-80}>How It Works</Link2> 
+                  {
+                    wallet.account ? 
+                    <Link2 to="/work" spy={true} smooth={true} offset={-80}>My Campaigns </Link2> 
+                    :
+                    null
+                  }
               </ul> 
             </PC>
 

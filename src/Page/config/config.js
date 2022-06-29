@@ -34,6 +34,10 @@ export const FactionData = [
     {bg:"linear-gradient(to right, #ffe000, #799f0c)",img:Telum,name:"Save The Children Fund Save The Children ", details:"Fundraising For The People And Causes ",rbtn:"GROUND",rbg:"#91705f",rank:"05", isSale:false,main: false},
     {bg:"linear-gradient(to right, #ffe000, #799f0c)",img:Telum,name:"Save The Children Fund Save The Children ", details:"Fundraising For The People And Causes ",rbtn:"GROUND",rbg:"#91705f",rank:"05", isSale:false,main: false},
 
+    {bg:"linear-gradient(to right, #ffe000, #799f0c)",img:Telum,name:"Save The Children Fund Save The Children ", details:"Fundraising For The People And Causes ",rbtn:"GROUND",rbg:"#91705f",rank:"05", isSale:false,main: false},
+    {bg:"linear-gradient(to right, #ffe000, #799f0c)",img:Telum,name:"Save The Children Fund Save The Children ", details:"Fundraising For The People And Causes ",rbtn:"GROUND",rbg:"#91705f",rank:"05", isSale:false,main: false},
+    {bg:"linear-gradient(to right, #ffe000, #799f0c)",img:Telum,name:"Save The Children Fund Save The Children ", details:"Fundraising For The People And Causes ",rbtn:"GROUND",rbg:"#91705f",rank:"05", isSale:false,main: false},
+
 ]
 
 export const CardData = [

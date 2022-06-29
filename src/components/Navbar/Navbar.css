@@ -55,12 +55,22 @@
             display: flex;
             justify-content: space-between;
             /* background: aqua; */
-            width: 35rem;
+            width: 40rem;
             text-decoration: none;
             /* font-size: 1rem !important ; */
             /* margin-right: 10rem; */
         }
  
+        .listWallet{
+          list-style: none;
+          display: flex;
+          justify-content: space-between;
+          /* background: aqua; */
+          width: 50rem;
+          text-decoration: none;
+          /* font-size: 1rem !important ; */
+          /* margin-right: 10rem; */
+      }
 
           
           .list * {
@@ -125,6 +135,73 @@
             color: rgba(2, 169, 92, 1) !important;
           }
           
+
+          
+
+
+
+
+          .listWallet * {
+            box-sizing: border-box;
+            transition: all .35s ease;
+            font-size: 1rem;
+            font-weight: bolder;
+          }
+          
+          .listWallet li {
+            display: inline-block;
+            list-style: outside none none;
+            margin: .5em 1em;
+            padding: 0;
+          }
+          
+         
+          .listWallet a {
+            padding: .5em .8em;
+            color: #000 !important;
+            position: relative;
+            text-decoration: none;
+            font-size: 1.15rem;
+            font-weight: 550;
+          }
+          
+          .listWallet a::before,
+          .listWallet a::after {
+            content: '';
+            height: 14px;
+            width: 14px;
+            position: absolute;
+            transition: all .35s ease;
+            opacity: 0;
+          }
+          
+          .listWallet a::before {
+            content: '';
+            right: 0;
+            top: 0;
+            border-top: 3px solid rgba(2, 169, 92, 1);
+            border-right: 3px solid rgba(2, 169, 92, 1);
+            transform: translate(-100%, 50%);
+          }
+          
+          .listWallet a:after {
+            content: '';
+            left: 0;
+            bottom: 0;
+            border-bottom: 3px solid rgba(2, 169, 92, 1);
+            border-left: 3px solid rgba(2, 169, 92, 1);
+            transform: translate(100%, -50%)
+          }
+          
+          .listWallet a:hover:before,
+          .listWallet a:hover:after{
+            transform: translate(0,0);
+            opacity: 1;
+          }
+          
+          .listWallet a:hover {
+            color: rgba(2, 169, 92, 1) !important;
+          }
 
         
         .container{

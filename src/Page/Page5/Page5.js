@@ -1,17 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
+import './Style.css'
 // import img from '../../components/Navbar/logo.png'
 import Tilt from 'react-parallax-tilt';
 import bg from './bg.jpg'
 import theme from "styled-theming";
-import tank from './king.png'
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
-import { SiHomeassistant } from 'react-icons/si';
-import { IoIosPodium } from 'react-icons/io';
-import { SiAzuredataexplorer } from 'react-icons/si';
-import { SiZig } from 'react-icons/si'
-import { T } from '../Page2/Page2'
+
+import { FaAngleDown } from 'react-icons/fa';
 
 export const backgroundColor = theme("theme", {
     light: "#000000",
@@ -22,12 +17,13 @@ const Sec = styled.section`
     min-height: 100vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 3rem  0;
-    background-color:  #000000;
+    background-color: rgba(249, 232, 202, 1);
     background-repeat: no-repeat;
-    background-image: url(${tank});
+    background-image: url();
     background-size: 50% 70%;
     background-position: right top !important;
   
@@ -39,7 +35,66 @@ const Sec = styled.section`
       }
 `;
 
-const Left = styled.div`
+const Registration = styled.div`
+  width: 1300px;
+
+  display: flex;
+  border-radius: 0.75rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+
+  @media only screen and (max-width: 1300px) {
+    width: 98%;
+    
+  }
+  @media only screen and (max-width: 1100px) {
+    
+    display: grid;
+    
+      grid-template-columns: repeat(2, minmax(50%, 1fr));
+      place-items: center;
+    
+  }
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
+const T = styled.p`
+    color: #000;
+    font-weight: normal;
+    font-size: 1.8rem;
+    margin: 1rem 0 -0.5rem 2rem; 
+    // margin-bottom: 2rem;
+    // text-align: left;
+    //  font-weight: lighter;
+    //  letter-spacing: 0.05rem;
+    //  line-height: 1.8;
+    @media only screen and (max-width: 768px) {
+        font-weight: 510;
+        font-size: 1rem;
+       
+      }
+`;
+
+const Tp = styled.p`
+    color: grey;
+    font-weight: normal;
+    font-size: 1.2rem;
+    margin: 1rem 0 -0.5rem 2rem; 
+    text-align: right;
+ 
+    @media only screen and (max-width: 768px) {
+        font-weight: 510;
+        font-size: 1rem;
+       
+      }
+`;
+
+const Section = styled.div`
         margin-right: 2rem;
         display: flex;
         flex-direction: column;
@@ -53,107 +108,134 @@ const Left = styled.div`
       }
 `;
 
-const Right = styled.div`
-      margin-left: 2rem;
-      @media only screen and (max-width: 768px) {
-        width: 100%;
-        padding: 0 1rem;
-        height: auto;
-        margin-left: 0;
+const Line = styled.div`
+     height: 3rem;
+     width: 1px;
+     background: rgba(0,0,0,0.3);
+     margin: 0 2rem 0 0;
+     display: block;
+      @media only screen and (max-width: 1100px) {
+        display: none;
       }
 `;
 
+const Button = styled.button`
+  background-color: rgba(2, 169, 92, 1);
+  border: none;
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 0 1.5rem;
+  color: #FFF;
+  font-size: 1.2rem;
+  height: 8rem;
+  width: 15rem;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 
+ 
+  @media only screen and (max-width: 1100px) {
+    height: 4rem;
+   
+  }
+
+  @media only screen and (max-width: 768px) {
+    height: 4rem;
+    width: 100%;
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+`
+const SmallButton = styled.button`
+  background-color: transparent;
+  border: 2px solid rgba(2, 169, 92, 1);
+  border-radius: 0.5rem ;
+  padding: 0.5rem 1.5rem;
+  color: rgba(2, 169, 92, 1);
+  font-size: 1.2rem;
+  cursor: pointer;
+      margin: 0 0 0 1rem;
+`
+
+const Container = styled.div`
+    display: flex;
+    align-items: center;
+    width: 100%;
+    //align-items: ;
+    justify-content: flex-end;
+    margin: 0 0 3rem 0;
+
+    @media only screen and (max-width: 768px) {
+      margin: 2rem 0 3rem 0;
+    }
+`
+const Width = styled.div`
+      width: 1300px;
+      display: flex;
+      flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    
+    @media only screen and (max-width: 1400px) {
+        width: 95%;
+    }
+    @media only screen and (max-width: 1100px) {
+        flex-direction: column;
+    }
+`
+const Margin = styled.div`
+@media only screen and (max-width: 1100px) {
+  margin: 0 0 1rem 0;
+}
+@media only screen and (max-width: 768px) {
+  margin: 1rem 0;
+}
+` 
 
 const Page5 = () => {
   
     return (
-        <Sec id="learn">
-            <VerticalTimeline>
-                <VerticalTimelineElement
-                    className="vertical-timeline-element--work"
-                    contentStyle={{ background: '#e69500', color: '#FFF' }}
-                    contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-                    // date="Phase 01"
-                    iconStyle={{ background: '#000', color: '#fff' }}
-                    icon={<SiHomeassistant />}
-                >
-                    {/* <h3 className="vertical-timeline-element-title">0%</h3> */}
-                    <h4 style={{fontSize:"1.4rem"}} className="vertical-timeline-element-subtitle">Our way of thanking the community</h4>
-                    <T>
-                    With financial inequity crippling the masses, poverty, hunger and injustice are nowhere near curbed the way they should be! As King Solomon continues to assume its own space in the metaverse, we are made aware of the need to act now. Blockchain assets have the power to change the world, and of course, change starts at home. Safe to say, King Solomon is not without purpose. We are driven by a passion to achieve financial prosperity and share the success with those in need. After all, it’s the community that matters above all else. We’re eager to follow in the footsteps of a ruler that cared for his people and not just about mindless conquests. Living up to its name, our NFT project will be actively donating to these charity organizations such as WWO, UNICEF, Feeding America and ST. Judes Children Hospital! Secondary offerings – simply put, a large portion of monetary gains – will be donated to reliable entities that can make a positive difference in a person’s life.
-                    </T>
-                </VerticalTimelineElement>
-                <VerticalTimelineElement
-                    className="vertical-timeline-element--work"
-                    contentStyle={{ background: '#e69500', color: '#FFF' }}
-                    // date="Phase 02"
-                    iconStyle={{ background: 'rgba(237, 73, 74, 1)', color: '#fff' }}
-                    icon={<IoIosPodium />}
-                >
-                    <h3 className="vertical-timeline-element-title"></h3>
-                    <h4 style={{fontSize:"1.4rem"}} className="vertical-timeline-element-subtitle">Backed by a network of powerful NFT Partners</h4>
-                    <T>
-                    Worthy NFTS in the metaverse aren’t stand-alone projects with no alliances. That’s not quiet befitting for a ruler ambitious enough to establish a strong dynasty, now, is it? Verily, we will move forward, despite the challenges, boosted by the dedication of our holders and the support of our partners.
-
-                    </T>
-                </VerticalTimelineElement>
-                <VerticalTimelineElement
-                    className="vertical-timeline-element--work"
-                    contentStyle={{ background: '#e69500', color: '#FFF' }}
-                    // date="Phase 03"
-                    iconStyle={{ background: 'rgba(237, 73, 74, 1)', color: '#fff' }}
-                    icon={<SiAzuredataexplorer />}
-                >
-                    <h3 className="vertical-timeline-element-title"></h3>
-                    <h4 style={{fontSize:"1.4rem"}} className="vertical-timeline-element-subtitle">Limitless staking opportunities with $WINE token</h4>
-                    <T>
-                    Religion doesn’t just have holistic benefits; it can also increase your savings and expand your bank account! As a crypto enthusiast, you will be able to stake your NFT for the religious wonder token and maximize earnings like never before. Holders seek better than market returns, and that’s no secret. Rest assured, what we have in store will take you by pleasant surprise. Investors will be eligible for up to 10% yearly gains on their staked NFT!
-
-                    </T>
-                </VerticalTimelineElement>
-                <VerticalTimelineElement
-                    className="vertical-timeline-element--work"
-                    contentStyle={{ background: '#e69500', color: '#FFF' }}
-                    // date="Phase 04"
-                    iconStyle={{ background: '#000000', color: '#fff' }}
-                    icon={<SiZig />}
-                >
-                    <h3 className="vertical-timeline-element-title"></h3>
-                    <h4 style={{fontSize:"1.4rem"}} className="vertical-timeline-element-subtitle">Treading the future of NFT will zero qualms</h4>
-                    <T>
-                    The future, as unprecedented as it is, holds immense rewards for those who remain prepared. Rest assured, King Solomon is based on ample planning, resource resilience and worthy partnerships that improve its future outlook by a large margin. Unlike all those NFTS floating around, ours doesn’t just offer hollow claims, it proposes real and measurable results.
-
-                    </T>
-                </VerticalTimelineElement>
-                {/* <VerticalTimelineElement
-                    className="vertical-timeline-element--work"
-                    contentStyle={{ background: '#e69500', color: '#FFF' }}
-                    date="Phase 05"
-                    iconStyle={{ background: 'rgba(237, 73, 74, 1)', color: '#fff' }}
-                    icon={<SiZig />}
-                >
-                    <h3 className="vertical-timeline-element-title"></h3>
-                    <h4 style={{fontSize:"1.4rem"}} className="vertical-timeline-element-subtitle">Phase 05</h4>
-                    <T>
-                    D.A.D Online sneak peeks and Alpha access whitelists. While our team holds the Alpha access lottery, we will start the $PCORE staking for governance rights. Revealing more aspects of the king as development progresses to its final stage before D.A.D Online goes public.
-                    </T>
-                </VerticalTimelineElement>
-                <VerticalTimelineElement
-                    className="vertical-timeline-element--work"
-                    contentStyle={{ background: '#e69500', color: '#FFF' }}
-                    date="Phase 06                   "
-                    iconStyle={{ background: '#000', color: '#fff' }}
-                    icon={<SiZig />}
-                >
-                    <h3 className="vertical-timeline-element-title"></h3>
-                    <h4 style={{fontSize:"1.4rem"}} className="vertical-timeline-element-subtitle">Phase 06</h4>
-                    <T>
-                    The start of D.A.D Online beta, marketplace, and second-generation Plasma Energy Core minting. In conjunction with the reveal of D.A.D Metaverse, comprehensive Serum usage guide and examples of Avatars that have already used the Serum.
-
-                    </T>
-                </VerticalTimelineElement> */}
-              </VerticalTimeline>
+        <Sec id="">
+          <Width>
+            <Container>
+              <T style={{fontSize:'1.5rem',margin:'0'}}>Already a member?</T>
+              <SmallButton>
+                LOG IN
+              </SmallButton>
+            </Container>
+            <Registration>
+              <div>
+                <T>Registering for</T>
+                <div class="dropdown">
+                  <button class="dropbtn">Select Option <FaAngleDown style={{fontSize:'1.8rem',color:'grey'}} /> </button>
+                  <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                  </div>
+                </div>
+              </div>
+              <div style={{display:'flex',alignItems:'flex-end'}}>
+                <Line />
+                <div>
+                  <p style={{fontSize:'1.2rem',margin:'0 0 0.5rem 0'}}>Name</p>
+                  <input type="email" placeholder="Enter Name"  className="input" style={{height:"2rem",width:"10rem"}} />
+                </div>
+              </div>
+              <Margin style={{display:'flex',alignItems:'flex-end'}}>
+                <Line />
+                <div>
+                  <p style={{fontSize:'1.2rem',margin:'0 0 0.5rem 0'}}>Mobile Number</p>
+                  <input type="email" placeholder="Enter Number"  className="input" style={{height:"2rem",width:"10rem"}} />
+                </div>
+              </Margin>
+              <Button>
+                REGISTER FREE
+              </Button>
+            </Registration>
+            <div style={{width:"100%",margin:'1rem 0 0 0'}}>
+              <Tp>By clicking register free, I agree to the T&C and Privacy Policy</Tp>
+            </div>
+          </Width>
         </Sec>
     )
 }
