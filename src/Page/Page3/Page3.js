@@ -131,7 +131,7 @@ const Page3 = (props) => {
                 disableDotsControls={true}
                 autoPlayStrategy={'none'}
                 autoHeight={true}
-                paddingLeft={60}
+                //paddingLeft={60}
                 responsive={resposive}
                
             >
